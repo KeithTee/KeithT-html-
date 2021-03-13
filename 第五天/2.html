@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>骰子</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+			/*透视属性*/
+			perspective: 1200px;
+		}
+		.outer{
+			width: 600px;
+			height: 600px;
+			border: 1px solid red;
+			transition: all linear 15s 0s;
+			margin: 200px auto;
+			transform-style:preserve-3d;
+		}
+
+	
+
+		.one{
+			width: 300px;
+			height: 300px;
+			background: url("1.jpg");
+			transform:translateX(150px) translateY(150px) translateZ(150px);
+			opacity: 0.6;
+		}
+		
+		.two{
+			width: 300px;
+			height: 300px;
+			background: url("2.jpg");
+			transform:translateX(150px) translateY(-150px) translateZ(-150px);
+			/*这里为啥Y=0时，在最低端？
+			因为他们是依次向下排列的，所以第二个的图片的原始位置应该是在第一个图片下面，当他们要平行时，需要向上挪（他们上面一共有的照片的高度）
+			所以第二张图片应该向上挪300px,算法是150-300=-150,所以得出位置是-150
+			同理第三张图片向上600,即150-600=-450*/
+			opacity: 0.6;
+		}
+
+		.three{
+			width: 300px;
+			height: 300px;
+			background: url("3.jpg");
+			transform:translateX(0px) translateY(-450px) translateZ(0px) rotateY(90deg);
+			opacity: 0.6;
+		}
+
+		.four{
+			width: 300px;
+			height: 300px;
+			background: url("4.jpg");
+			transform:translateX(300px) translateY(-750px) translateZ(0px) rotateY(-90deg);
+			opacity: 0.6;
+		}
+
+		.five{
+			width: 300px;
+			height: 300px;
+			background: url("5.jpg");
+			transform:translateX(150px) translateY(-1200px) translateZ(0px) 
+			rotateX(270deg);
+			/*opacity: 0.6;*/
+		}
+
+		.six{
+			width: 300px;
+			height: 300px;
+			background: url("6.jpg");
+			transform:translateX(150px) translateY(-1200px) translateZ(0px)
+			rotateX(90deg);
+			/*opacity: 0.6;*/
+		}
+
+
+
+
+
+		.outer:hover{
+			transform: rotateY(1200deg) rotateX(1200deg) rotateZ(1200deg);
+		}
+
+	</style>
+</head>
+<body>
+	<div class="outer">
+
+		<div class = "one">	    </div>
+		<div class = "two"> 	</div>
+		<div class = "three">	</div>
+		<div class = "four">	</div>
+		<div class = "five">	</div>
+		<div class = "six">		</div>
+
+	</div>
+</body>
+</html>
