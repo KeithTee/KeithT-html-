@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>背景属性</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		div{
+			width:300px;
+			height:300px;
+			border:1px solid red;
+		}
+		.color{
+			/*设置元素的背景颜色*/
+			background-color:tomato;
+		}
+		.image{
+			/*设置元素的背景图片*/
+			/*background-image: url("bg.jpg");*/
+			/*设置背景图片不重复*/
+			/*background-repeat:no-repeat;*/
+			/*设置背景图片的位置*/
+			/*background-position:top center;*/
+			background:url("bg.jpg") no-repeat top center;
+		}
+		.test{
+			/*background:-webkit-linear-gradient(left,red,orange,yellow,green,cyan,blue,purple);*/
+			/*background:-webkit-linear-gradient(top,gray,white);*/
+			/*white   白色
+			transparent  透明色*/
+			background:-webkit-radial-gradient(circle,blue,red);
+		}
+		.size{
+			background:url("bg.jpg") no-repeat;
+			background-size:300px 300px;
+		}
+	</style>
+</head>
+<body>
+	<!-- <div class="color">
+		我用尽一生一世来将你狗养，
+		请赐予我乳腺癌和肺癌的力量
+	</div> -->
+	<!-- <div class="image">
+		轻拢慢捻抹复挑
+	</div> -->
+	<!-- <div class="test">
+		怎么挣钱快：翻开刑法，对着干的都挣钱快
+	</div> -->
+	<div class="size"></div>
+</body>
+</html>
