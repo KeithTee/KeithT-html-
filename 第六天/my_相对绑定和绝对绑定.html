@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>相对绑定和绝对绑定</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+		}
+		div{
+			margin:40px margin;
+			padding: 0px;
+			height: 400px;
+			background: teal; 
+			text-align: center;
+			font-size: 38px;
+			position: relative;	
+
+		}
+		ul{
+			background: gray;
+			width: 200px;
+			height: 100px;
+
+			display: none;
+			position: absolute;
+
+			top: 40px;
+			left: -100px;
+
+		}
+		div:hover ul{
+			/*目前理解为显示*/
+			display:block;
+		}
+
+		li{
+			color: red;
+			width: 100px;
+			height: 40px;
+			float: left;
+		}
+
+	</style>
+</head>
+<body>
+	<div>
+		我的游戏
+		<ul>
+			<li>英雄联盟</li>
+			<li>穿越火线</li>
+			<li>刀塔传奇</li>
+			<li>我的世界</li>
+		</ul>
+	</div>
+	<img src="1.gif">
+</body>
+</html>

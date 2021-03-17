@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>文本属性</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.one{
+			border:8px solid teal;
+			width:400px;
+			height: 100px;
+			text-align:center;
+			/*设置文字水平居中*/
+			line-height: 80px;
+			/*设置文字距离顶部的高度，这个顶部，是整个html5界面的顶部，而不是整个框框的顶部*/
+		}
+
+		.two{
+			text-indent: 2em;
+			/*em是汉字的单位，2em是前面空2个汉字*/
+			text-decoration: overline;
+			/*在文字的顶部画线*/
+		}
+		.three{
+			color:#333333;
+			/*一般默认用#333333色*/
+			text-decoration:none;
+			/*取消掉超链接标签默认的下划线*/
+		}
+	</style>
+</head>
+<body>
+	<div class="one">
+		div是块状标签,块状元素
+	</div>
+
+	<p class="two">
+		p是段落标签，行内元素
+	</p>
+
+	<a class = "three" href="#">
+		a是超链接标签，行内元素
+	</a>
+		
+
+	
+</body>
+</html>

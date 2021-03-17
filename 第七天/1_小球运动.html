@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>小球运动</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.qiu{
+			width: 100px;
+			height: 100px;
+			background: teal;
+			border-radius: 50%;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+
+			animation-name: qiu;
+			animation-duration: 3s;
+			animation-timing-function: ease;
+			animation-delay: 0s;
+			animation-iteration-count: infinite;
+			animation-direction: normal;
+
+		}
+		@keyframes qiu{
+			0%{
+				left: 0px;
+				top: 0px;
+				background: #66ccff;
+			}
+
+			33%{
+				left: 1820px;
+				top: 0px;
+				background: skyblue;
+			}
+			66%{
+				left: 1820px;
+				top: 800px;
+				background: red;
+			}
+			100%{
+				left: 0px;
+				top: 0px;
+				background: teal;
+			}
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="qiu">
+		
+
+
+	</div>
+
+</body>
+</html>

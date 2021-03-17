@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>内边距属性</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.outer{
+			width: 600px;
+			height:400px;
+			border: 4px solid teal;
+			padding-top: 200px;
+			padding-left: 200px;
+		}
+		.inner{
+			width: 200px;
+			height:100px;
+			border: 3px solid red;
+			background: purple;
+			/*内间距属性不是用来调整位置的，改变元素大小的
+			平时在工作中，内间距属性也会被叫做内补白属性，用来撑开元素大小
+			padding属性的属性值，在一个值，两个值，三个值和四个值的时候，和margin是一致的*/
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="outer">
+		<div class="inner">
+			小仙女就是我，我就是小仙女
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>外间距属性</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	.outer{
+		width:500px;
+		height: 300px;
+		border:5px solid teal;
+		margin: 200px auto;
+		/*注意：当maigin属性中有1，2，3，4个属性值时，各个的表示的意义各不相同。*/
+	}
+
+	.inner{
+		width: 300px;
+		height: 180px;
+		border: 4px solid skyblue;
+		margin:50px auto;
+		/*margin-left   margin-top  margin-right  margin-bottom   定义基于父对象总高度的百分比上外边距。*/
+	}
+
+	</style>
+</head>
+<body>
+	<div class="outer">
+		<div class ="inner">
+			<p>margin属性的使用</p>
+			<p>很久很久以前，她还是个小美人</p>
+		</div>
+	</div>
+</body>
+</html>

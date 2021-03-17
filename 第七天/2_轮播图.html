@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>轮播图</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+		}
+		.swiper-item,.swiper-item img{
+			width: 500px;
+			height: 300px;
+		}
+		#swiper-wrap{
+			width: 2500px;
+			height: 300px;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			animation: lunbo 10s ease 0s infinite normal;
+
+		}
+
+		@keyframes lunbo{
+			0%{
+				left: 0px;
+			}
+			25%{
+				left: -500px;
+			}
+			50%{
+				left: -1000px;
+			}
+			75%{
+				left: -1500px;
+			}
+			100%{
+				left: -2000px;
+			}
+			
+
+
+		}
+		#swiper{
+				width: 500px;
+				height: 300px;
+				border: 5px solid teal;
+				margin: 100px auto;
+				position: relative;
+				overflow: hidden;
+
+		}
+
+		.swiper-item{
+			float:left;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div id="swiper">
+		<ul id="swiper-wrap">
+			<li class="swiper-item">
+				<a href="#">
+					<img src="s1.jpg">
+				</a>
+			</li>
+		
+		
+			<li class="swiper-item">
+				<a href="#">
+					<img src="s2.jpg">
+				</a>
+			</li>
+		
+		
+			<li class="swiper-item">
+				<a href="#">
+					<img src="s3.jpg">
+				</a>
+			</li>
+		
+		
+			<li class="swiper-item">
+				<a href="#">
+					<img src="s4.jpg">
+				</a>
+			</li>
+
+			<li class="swiper-item">
+				<a href="#">
+					<img src="s1.jpg">
+				</a>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
