@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>打印斜三角形</title>
+	</head>
+	<body>
+	</body>
+</html>
+<script>
+	
+	//     *			0行			4个空格			1个*
+	//   * * *			1行			2个空格			3个*
+	// * * * * *		2行			0个空格			5个*
+	
+	// 行*2+nbsp = 4
+	
+	for(col = 0 ; col < 3; col++){
+
+		for(nbsp = 0 ;nbsp < 4- 2*col ; nbsp++){
+			document.write('&nbsp');
+		}
+		
+		for(cow = 0; cow < col+1 ; cow++){
+			document.write('*&nbsp&nbsp');
+		}
+		document.write('<br \>')
+	}
+</script>

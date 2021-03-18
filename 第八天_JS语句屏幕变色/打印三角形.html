@@ -1,0 +1,21 @@
+<script>
+	var line = 5;
+	for(col = 1 ; col <=line ; col++ ){
+		// 打印空格
+		// for(before = line/2+1 ; before>0; before-=2){
+		// 	document.write('&nbsp')
+		// }
+		// 打印星号
+		for(cow = 1 ; cow <= line*2 -1 ; cow++ ){
+			if(cow >= (line-col+1)&&cow<=(line+col-1))
+			document.write('*')
+			else{document.write('&nbsp')}
+		}
+		// 打印后面的空格
+		// for(after = line/2+1 ; after > 0; after -=2){
+		// 	document.write('&nbsp')
+		// }
+		
+		document.write('<br />')
+	}
+</script>

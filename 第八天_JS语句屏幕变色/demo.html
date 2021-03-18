@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body id="body">
+
+</body>
+</html>
+<script type="text/javascript">
+	//	测试是否可以改变body的颜色
+	// body.style.background = 'red'
+	//	写一个函数，每隔一段时间，让body的颜色变一下
+	setInterval(function(){
+		// var r = ran();
+		// var g = ran();
+		// var b = ran();
+		body.style.background = 'rgba('+ ran() +',' + ran() + ',' + ran() + ',1)';
+		// console.log(ran())
+	},1000);
+	// 随机取值的函数
+	// 给body赋值
+	function ran(){
+		// var r = Math.floor(Math.random()*10000000) % 256;
+		// var g = Math.floor(Math.random()*10000000) % 256;
+		// var b = Math.floor(Math.random()*10000000) % 256;
+		// 0-255   
+		// 0-1小数*10000000 % 256
+		// console.log();
+		return Math.floor(Math.random()*10000000) % 256;
+	}
+</script>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body id = "body">
+	</body>
+</html>
+<script type="text/javascript">
+	
+	// Math.floor 是向下取整,即Math.floor(45.05) = 45
+	// Math.floor(-34.2) = -35
+	
+	// Math.random()是取随机数,在html中,随机数是0-1的小数
+	
+	// 一般都*1000 0000 ,再对256取余
+	
+	setInterval(change,1000);
+	
+	
+	//change函数是改变body颜色
+	 function change(){
+		body.style.background = 'rgba(' + x() + ',' + x() +' , '+ x() + ' , 1 )';
+	}
+	
+	// x函数是取随机数
+	function x(){
+		return Math.floor(Math.random()*10000000)%256;
+		
+	}
+	
+</script>
