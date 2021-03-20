@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>小球弹壁运动</title>
+		<style>
+			#biankuang{
+				width: 515px;
+				height: 415px;
+				border:5px solid gray;
+				padding: 0px;
+				margin : 0px;
+			}
+			#ball{
+				/* 设置div小球的属性 */
+				width: 30px;
+				height: 30px;
+				position:absolute;
+				border-radius :50%;
+				background : teal;
+				left = 0px;
+				top = 0px;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div id="biankuang">
+			<div id="ball"> 
+			</div>
+		</div>
+		
+	</body>
+</html>
+<script>
+	
+		var stepX = 1;
+		var stepY = 1;
+		
+	
+	function move(){
+		var nowLeft = ball.offsetLeft;
+		var nowTop = ball.offsetTop;
+		
+		// 这里修改它上边框和左边框为10的目的是:配合border使用,否则它会出去,造成视觉上的不和谐
+		if(nowLeft > 500 || nowLeft < 10 ){
+			stepX = -stepX;
+		}
+		
+		if(nowTop > 400 || nowTop < 10){
+			stepY = -stepY;
+		}
+		
+		ball.style.left = stepX　+ nowLeft + 'px';
+		ball.style.top = stepY + nowTop + 'px';
+			
+	}
+		setInterval(move,5);
+</script>
