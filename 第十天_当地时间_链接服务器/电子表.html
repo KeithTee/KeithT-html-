@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>我是一个电子表</title>
+		<style type = "text/css">
+			#watch{
+				width:1000px ;
+				height:auto;
+				margin : 50px auto;
+				border:10px solid teal;
+				text-align : center;
+				font-size : 50px;
+				line-height : 150px;
+				color : red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="watch"></div>
+	</body>
+</html>
+<script type="text/javascript">
+	function getTimes(){
+		var time = new Date();
+		var year = time.getFullYear();
+		var month = time.getMonth() + 1;
+		var date = time.getDate();
+		var hour = time.getHours();
+		var minute = time.getMinutes();
+		var second = time.getSeconds();
+		var day = time.getDay();
+		var str = year + '年'+ month + '月' + date + '日' + hour + ':' + minute+':'+second + '&nbsp&nbsp星期' + day;
+		watch.innerHTML = str
+	}
+	getTimes()
+	setInterval(getTimes,1000)
+</script>
