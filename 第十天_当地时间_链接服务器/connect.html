@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>请求连接</title>
+	</head>
+	<body>
+		<div id="box"></div>
+	</body>
+</html>
+<script type = "text/javascript">
+	// 实例化ajax对象
+	var xhr = new XMLHttpRequest();
+	
+	// 准备发送请求
+	xhr.open('GET','http://localhost:3000/');
+	
+	// 发送请求
+	xhr.send();
+	
+	// 接受服务器返回的数据
+	xhr.onreadystatechange = function(){
+		// 判断是否到达第四步
+		if(xhr.readyState == 4){
+			console.log(xhr.responseText);
+		}
+	}
+</script>
