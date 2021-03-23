@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>带有样式的菜谱</title>
+	<!-- 引入vue -->
+	<script src="js/vue.js"></script>
+	<!-- 引入外部的css文件 -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<!-- 引入jquery文件 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=0" />
+	<script src="js/jquery.js"></script>
+	
+</head>
+<body>
+	<div id="app" class="container">
+		<div class="jumbotron">
+		  <h1 class="display-4">菜谱大全</h1>
+		  <p class="lead">好好做饭，养胖自己</p>
+		  <hr class="my-4">
+		  <div class="form-group">
+		    <label for="search">请输入关键字</label>
+		    <input type="email" class="form-control" id="search" aria-describedby="emailHelp" v-model="searchVal" >
+		  </div>
+		  <a class="btn btn-primary btn-lg" role="button" v-on:click="searchFood">搜索</a>
+		</div>
+		<div>
+			<ul class="list-group">
+			  <li class="list-group-item" v-for="(item,index) in list">
+			  	<h3>{{ item.name }}</h3>
+			  	<p v-html="item.content"></p>
+			  	<img :src="item.pic">
+
+			  	<div class="row">
+			  		<!-- 便利item里面的material -->
+			  		<div class="col-sm"   v-for="(items,indexs) in item.material">
+				      <p>{{ items.mname }}</p>
+				      <p>{{ items.amount }}</p>
+				    </div>
+			  	</div>
+			  </li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	new Vue({
+		el:'#app',
+		// vue中所有的变量都需要写在data里面
+		data:{
+			searchVal:'',
+			list:[]
+		},
+		// vue中的所有函数都必须写在这里
+		methods:{
+			searchFood:function(){
+				// 在函数中使用vue变量，需要在前面添加this.
+				// console.log(this.searchVal);
+				//	需要声明一个变量，接受vue的this
+				var _this = this;
+				//	需要发送ajax，并且返回数据
+				$.ajax({
+					url:'http://localhost:3000/?keyword=' + _this.searchVal,
+					type:'GET',
+					success:function(res){
+						var body = JSON.parse(res.body);
+						// console.log(body.result.list);
+						_this.list = body.result.list;
+						console.log(_this.list)
+					}
+				})
+			}
+		}
+	})
+</script>
